@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="bumblebee">
+<head>
+    <!-- 메타 태그 및 제목 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성숙자반 - 사도신경</title>
+
+    <!-- Google Fonts - Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS 및 DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.26.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* 한글 폰트 적용 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 블록 인용문 애니메이션 (필요 시 사용) */
+        .fade {
+            transition: opacity 1.5s ease, max-height 0.5s ease;
+            opacity: 1;
+            max-height: 1000px;
+            overflow: hidden;
+        }
+
+        .fade-hidden {
+            opacity: 0;
+            max-height: 0;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        /* fullscreen 클래스: 전체 화면을 덮으며 중앙 정렬 */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        /* fullscreen 상태에서 이미지의 최대 크기 지정 */
+        .fullscreen img {
+            max-width: 95%;
+            max-height: 95%;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-base-content bg-base-200 p-6">
+<div class="max-w-4xl mx-auto space-y-8">
+    <!-- 헤더: 제목과 다크모드 토글 -->
+    <div class="flex justify-between items-center bg-base-100 rounded-lg shadow-xl p-6">
+        <h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-center">성숙자반 - 사도신경</h1>
+        <label class="swap swap-rotate">
+            <!-- 토글 컨트롤 -->
+            <input type="checkbox" onclick="toggleTheme()" />
+            <!-- sun icon -->
+            <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                        d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+            </svg>
+            <!-- moon icon -->
+            <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                        d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Z" />
+            </svg>
+        </label>
+    </div>
+    <section class="card bg-base-100 shadow-xl rounded-lg p-6 max-w-full">
+        <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-6 border-b pb-2 text-center">
+            사도신경
+        </h2>
+        <table class="table table-zebra w-full table-auto text-xs sm:text-sm md:text-base lg:text-lg text-center">
+            <thead>
+            <tr>
+                <th class="whitespace-normal break-words">기존 번역</th>
+                <th class="whitespace-normal break-words">새 번역</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="whitespace-normal break-words">전능하사 천지를 만드신 하나님 아버지를 내가 믿사오며,</td>
+                <td class="whitespace-normal break-words">나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">그 외아들 우리 주 예수 그리스도를 믿사오니,</td>
+                <td class="whitespace-normal break-words">나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">이는 성령으로 잉태하사 동정녀 마리아에게 나시고,</td>
+                <td class="whitespace-normal break-words">그는 성령으로 잉태되어 동정녀 마리아에게서 나시고,</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">본디오 빌라도에게 고난을 받으사, 십자가에 못박혀 죽으시고,</td>
+                <td class="whitespace-normal break-words">본디오 빌라도에게 고난을 받아 십자가에 못 박혀 죽으시고,</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">장사한지 사흘만에 죽은 자 가운데서 다시 살아나시며,</td>
+                <td class="whitespace-normal break-words">장사된 지 사흘만에 죽은 자 가운데서 다시 살아나셨으며,</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">하늘에 오르사, 전능하신 하나님 우편에 앉아 계시다가,</td>
+                <td class="whitespace-normal break-words">하늘에 오르시어 전능하신 아버지 하나님 우편에 앉아 계시다가,</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">저리로서 산 자와 죽은 자를 심판하러 오시리라.</td>
+                <td class="whitespace-normal break-words">거기로부터 살아있는 자와 죽은 자를 심판하러 오십니다.</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">성령을 믿사오며,</td>
+                <td class="whitespace-normal break-words">나는 성령을 믿으며,</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">거룩한 공회와, 성도가 서로 교통하는 것과,</td>
+                <td class="whitespace-normal break-words">거룩한 공교회와 성도의 교제와</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">죄를 사하여 주시는 것과, 몸이 다시 사는 것과, 영원히 사는 것을 믿사옵나이다.</td>
+                <td class="whitespace-normal break-words">죄를 용서 받는 것과 몸의 부활과 영생을 믿습니다.</td>
+            </tr>
+            <tr>
+                <td class="whitespace-normal break-words">아멘.</td>
+                <td class="whitespace-normal break-words">아멘.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- HTML 콘텐츠 영역: 사도신경 내용 표현 -->
+    <div class="card bg-base-100 shadow-xl rounded-lg p-6">
+        <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-6 border-b pb-2 text-center">사도신경의 중요성과 유래</h2>
+        <section class="text-xs sm:text-sm md:text-base lg:text-lg mb-8 p-6">
+            <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">사도신경의 중요성</h3>
+            <p class="my-4">신경이란 굳게 믿고 지키려는 생각 혹은 신념을 의미함.</p>
+            <p class="my-4 font-bold">사도신경은 우리 믿음의 핵심 내용
+            <p> 성경은 방대하며, 우리가 하나님을 믿는다고 고백할 때 우리가 믿는 것이 무엇인지 핵심을 정리할 필요가 있다.</p>
+            <p> 사도신경에는 우리 믿음의 핵심이 들어 있다.</p>
+            <p class="my-4 font-bold">사도신경은 하나님을 향한 인간의 고백
+            <p>십계명은 인간에 대한 하나님에 명령으로 우리에게 순종의 의무가 주어진다.</p>
+            <p>반면에 사도신경은 하나님을 향한 인간의 고백이며, 고백에 대한 인간의 책임이 뒤따른다.</p>
+            <div class="my-4">
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">사도신경의 유래
+                    <button class="btn btn-xs sm:btn-sm btn-outline ml-2" onclick="toggleVerse('beatitudes')">말씀 보기</button>
+                </h3>
+                <ul class="list-disc list-inside p-2">
+                    <li>사도들의 신앙고백에서 비롯 (베드로, 나다나엘, 마르다)
+                        <blockquote class="border-l-4 border-primary pl-4 mt-2 italic beatitudes fade fade-hidden">
+                            "이르시되 너희는 나를 누구라 하느냐" <br>
+                            "시몬 베드로가 대답하여 <strong>이르되 주는 그리스도시요 살아 계신 하나님의 아들이시니이다</strong>"<br> (마 16:15-16 [베드로의 고백]) <br>
+                        </blockquote>
+                        <blockquote class="border-l-4 border-primary pl-4 italic beatitudes fade fade-hidden">
+                            "나다나엘이 이르되 어떻게 나를 아시나이까 예수께서 대답하여 이르시되 빌립이 너를 부르기 전에 네가 무화과나무 아래에 있을 때에 보았노라" <br>
+                            "나다나엘이 대답하되 랍비여 <strong>당신은 하나님의 아들이시요 당신은 이스라엘의 임금이로소이다</strong>"<br> (요 1:48-49 [나다나엘의 고백]) <br>
+                        </blockquote>
+                        <blockquote class="border-l-4 border-primary pl-4 italic beatitudes fade fade-hidden">
+                            "예수께서 이르시되 네 오라비가 다시 살아나리라" <br>
+                            "마르다가 이르되 마지막 날 부활 때에는 다시 살아날 줄을 내가 아나이다" <br>
+                            "예수께서 이르시되 나는 부활이요 생명이니 나를 믿는 자는 죽어도 살겠고" <br>
+                            "무릇 살아서 나를 믿는 자는 영원히 죽지 아니하리니 이것을 네가 믿느냐" <br>
+                            "이르되 주여 그러하외다 <strong>주는 그리스도시요 세상에 오시는 하나님의 아들이신 줄 내가 믿나이다</strong>"<br> (요 11:23-27 [마르다의 고백]) <br>
+                        </blockquote>
+                    </li>
+                    <li class="mt-2">위 모든 고백의 핵심은 예수님께서 인간을 구원할 그리스도이시고 성자 하나님이시라는 것으로 동일</li>
+                    <li class="mt-2">직접 한 문장씩 모은 것이 아닌, 사도들의 신앙고백과 복음에 뿌리를 두고 정리되었기에 사도신경이라고 부름</li>
+                    <li class="mt-2">세례식에서 문답형 고백으로 시작 → 자기 고백형 신경으로 발전</li>
+                    <li class="mt-2">이단의 등장에 맞서 교회를 지키기 위한 표준 신앙고백으로 발전</li>
+                    <li class="mt-2">발전되어, 세례식에서만 국한 되지 않고 모든 예배에서 그리스도인들이 함께 고백하게 됨</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <section class="card bg-base-100 shadow-xl rounded-lg p-6 max-w-full text-xs sm:text-sm md:text-base lg:text-lg text-center">
+        <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-6 border-b pb-2">사도신경의 발전 과정</h2>
+        <table class="table table-zebra w-full table-fixed text-center">
+                <thead>
+                <tr>
+                    <th class="w-1/3 whitespace-normal break-words">고대 로마신조 (2세기)<br>문답형</th>
+                    <th class="w-1/3 whitespace-normal break-words">로마신조 (4세기)<br>고백형</th>
+                    <th class="w-1/3 whitespace-normal break-words">공인 원문 (750년)<br>Forma Recepta</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="whitespace-normal break-words">당신은 모든 것을 주관 하시는 아버지를 믿느뇨?</td>
+                    <td class="whitespace-normal break-words"><strong>나는 전능하신 하나님</strong> 아버지를 믿으며</td>
+                    <td class="whitespace-normal break-words">나는 전능하사 천지를 만드신 하나님 아버지를 믿으며</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">헬라와 라틴 문명의 신들과 구별하기 위해 '전능하신 하나님, 창조주'로 보완됨.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">당신은 하나님의 아들이시며</td>
+                    <td class="whitespace-normal break-words"><strong>그 외아들 우리 주 예수 그리스도를 믿으니</strong></td>
+                    <td class="whitespace-normal break-words">그 외아들 우리 주 예수 그리스도를 믿으니</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">예수님만 유일한 하나님의 아들이심을 밝히기 위해 명확히 기술함.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">동정녀 마리아에게서 성령에 의하여 나셨고</td>
+                    <td class="whitespace-normal break-words">이는 성령으로 동정녀 마리아에게서 나셨으니</td>
+                    <td class="whitespace-normal break-words">이는 성령으로 <strong>잉태하여</strong> 동정녀 마리아에게 나셨으며</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">예수님의 참사람 되심(가현설 반박)을 강조하기 위해 '잉태'라는 단어가 추가됨.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">본디오 빌라도에게 십자가에 달려서 죽으시고 그리고 장사되어</td>
+                    <td class="whitespace-normal break-words">본디오 빌라도에게 십자가에 <strong>못박혀</strong> 장사 지낸 바 되시고</td>
+                    <td class="whitespace-normal break-words">본디오 빌라도에게 <strong>고난을 받아</strong> 십자가에 못박혀 <strong>죽어</strong> 장사 지낸 바 되시고</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">예수님의 실질적 고난과 죽음을 강조하며 가사설 반박.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words"></td>
+                    <td class="whitespace-normal break-words"></td>
+                    <td class="whitespace-normal break-words"><strong>지옥에 내려가셨으며</strong></td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">복음이 지옥(음부)까지도 선포되었음을 의미. 대부분의 개신교에서는 생략되었으나 전통적으로 중요함.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">죽은 자 가운데서 다시 살아나심</td>
+                    <td class="whitespace-normal break-words"><strong>삼 일 만에</strong> 죽은 자 가운데서 살아나시며</td>
+                    <td class="whitespace-normal break-words">삼 일 만에 죽은 자 가운데서 살아나시며</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">죽은 후 사흘째 되는 날 부활하셨음을 명확히 하여 부활의 사실성을 강조.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">하늘에 오르사 아버지 우편에 앉아계시다가</td>
+                    <td class="whitespace-normal break-words">하늘에 오르사 아버지 우편에 앉으시고</td>
+                    <td class="whitespace-normal break-words">하늘에 오르사 <strong>전능하신 하나님</strong> 아버지 우편에 앉으시고</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">예수님이 하나님과 동일한 권위를 가지심을 강조.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">산 자와 죽은 자를<br>심판하러 오실 예수</td>
+                    <td class="whitespace-normal break-words"><strong>저리로서</strong> 산 자와 죽은 자를 심판하러 오시리라</td>
+                    <td class="whitespace-normal break-words">저리로서 산 자와 죽은 자를 심판하러 오시리라는 것을 믿사옵나이다</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">재림은 하늘에서 직접 오실 것임을 분명히 하여 이단 주장 반박.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">당신은 성령과</td>
+                    <td class="whitespace-normal break-words">나는 성령과 거룩한 교회와</td>
+                    <td class="whitespace-normal break-words"><strong>(나는 믿기를)</strong> 성령과</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">개인적인 믿음 고백임을 강조하기 위해 '나는 믿기를'이라는 표현이 추가됨.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">거룩한 교회와</td>
+                    <td class="whitespace-normal break-words">거룩한 교회와</td>
+                    <td class="whitespace-normal break-words">거룩한 <strong>공교회와 성도가 서로 교통하는 것과</strong></td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">보편적 교회(공교회)와 성도의 교제를 강조함.</td></tr>
+
+                <tr>
+                    <td class="whitespace-normal break-words">몸의 부활을 믿느뇨?</td>
+                    <td class="whitespace-normal break-words"><strong>죄를 사하여 주시는것과</strong>몸의 부활</td>
+                    <td class="whitespace-normal break-words">죄를 사하여 주시는 것과 몸이 부활하는 것과 <strong>영생을</strong> 믿사옵니다</td>
+                </tr>
+                <tr><td colspan="3" class="italic whitespace-normal break-words">신자의 죄 사함과 궁극적인 목적지인 영생을 명확히 고백.</td></tr>
+                </tbody>
+            </table>
+    </section>
+    <div class="card bg-base-100 shadow-xl rounded-lg p-6">
+        <section class="text-xs sm:text-sm md:text-base lg:text-lg mb-8 p-6">
+            <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-6 border-b pb-2 text-center">사도신경의 내용</h2>
+            <div class="space-y-6">
+                <div class="my-4">
+                    <h4 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">성부</h4>
+                    <p>Credo in Deum Patrem omnipotentem,</p>
+                    <p>나는 하나님 아버지를 믿습니다. 전능하신 하나님 아버지를 믿습니다.</p>
+                    <p>Creatorem caeli et terrae.</p>
+                    <p>천지의 창조자이신 하나님 아버지를 믿습니다.</p>
+
+                    <p>Credo는 "나는 믿는다"라는 뜻으로, 믿음은 나의 심장(cre)과 생명(do)을 드리는 고백이다.</p>
+                    <br>
+                    <p>전능하신 창조주 하나님께서 나의 아버지이시기에 어떤 상황에도 휩쓸리지 않고 믿음으로 살아갈 수 있다.</p>
+                </div>
+                <div class="my-4">
+                    <h4 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">성자</h4>
+                    <p>Et in Iesum Christum, Filium eius unicum, Dominum nostrum,</p>
+                    <p>하나님의 유일하신 아들인 우리의 주님이신 예수 그리스도를 믿사오니,</p>
+                    <p>qui conceptus est de Spiritu Sancto,</p>
+                    <p>그는 성령으로 잉태되어, </p>
+                    <p>natus ex Maria Virgine,</p>
+                    <p>동정녀 마리아에게서 태어나시고,</p>
+                    <p>passus sub Pontio Pilato, crucifixus, mortuus, et sepultus,</p>
+                    <p>본디오 빌라도에게 고난을 당하사 십자가에 못박혀 죽으시고 장사 지내셨으며,</p>
+                    <p>descendit ad inferos,</p>
+                    <p>지옥으로 내려가셨으며,</p>
+                    <p>tertia die resurrexit a mortuis,</p>
+                    <p>사흘째 되는 날 죽은 자들 가운데서 다시 살아나셨으며,</p>
+                    <p>ascendit ad caelos,</p>
+                    <p>하늘에 오르사,</p>
+                    <p>sedet ad dexteram Dei Patris omnipotentis,</p>
+                    <p>전능하신 하나님 아버지 오른쪽에 앉아계시나이다.</p>
+                    <p>inde venturus est iudicare vivos et mortuos.</p>
+                    <p>거기로부터 살아 있는 자와 죽은 자를 심판하러 오시리이다.</p>
+                    <br>
+                    <p>이 고백은 예수님을 나의 주로 고백하는 믿음이며, 믿음으로 바른 삶을 추구하고 하나님의 심판 앞에 서야 함을 상기시킨다.</p>
+                </div>
+                <div class="my-4">
+                    <h4 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">성령</h4>
+                    <p>Credo in Spiritum Sanctum,</p>
+                    <p>나는 성령님을 믿습니다.</p>
+                    <p>sanctam Ecclesiam catholicam,</p>
+                    <p>거룩하고 보편된 교회,</p>
+                    <p>sanctorum communionem,</p>
+                    <p>성도가 서로 교통(친교)하는 것,</p>
+                    <p>remissionem peccatorum,</p>
+                    <p>죄를 사하여 주시는 것,</p>
+                    <p>carnis resurrectionem et vitam aeternam. </p>
+                    <p>몸의 부활(원 상태로의 회복)과 영원히 사는 것을 믿나이다. </p>
+                    <br>
+                    <p>이 고백은 눈에 보이는 기적이 아닌, 보이지 않는 본질과 말씀을 믿는 신앙을 의미한다. 하나님께 내 심장과 생명을 드리는 참된 믿음의 고백이다.</p>
+                </div>
+            </div>
+            <div class="my-4">
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">결어</h3>
+                <p>Amen.</p>
+                <br>
+                <p>진실입니다, 믿습니다, 이루어질 것을 바랍니다, 동의합니다 라는 의미를 담은 고백이다. 사도신경은 진실한 믿음으로 끝맺는다.</p>
+            </div>
+        </section>
+    </div>
+    <section class="card bg-base-100 shadow-xl rounded-lg p-6">
+        <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold mb-6 border-b pb-2 text-center">결론</h2>
+        <ul class="list-decimal list-inside space-y-2 text-xs sm:text-sm md:text-base lg:text-lg p-6">
+            <li>사도신경의 고백은 반복될수록 의미가 깊어진다.</li>
+            <li>눈에 보이는 기적이 아닌, 보이지 않는 말씀의 본질을 믿어야 한다.</li>
+            <li>하나님의 말씀에 당신의 심장(Credo)과 생명을 드려야 한다.</li>
+            <li>하나님의 말씀이 그대의 생명을 영원히 책임져 줄 것이다.</li>
+        </ul>
+    </section>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <button id="scroll-to-top"
+            class="fixed top-1/2 right-4 md:right-8 lg:right-16 transform -translate-y-[100%] z-50 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300"
+            onclick="scrollToTop()" aria-label="맨 위로 이동">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- 맨 아래 이동 버튼 -->
+    <button id="scroll-to-bottom"
+            class="fixed top-1/2 right-4 md:right-8 lg:right-16 transform translate-y-[100%] z-50 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300"
+            onclick="scrollToBottom()" aria-label="맨 아래로 이동">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!-- 현재는 맨 위로 이동과 동일한 svg 코드 사용; 필요에 따라 아이콘 교체 가능 -->
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+    </button>
+</div>
+
+<script>
+    // 다크 모드 및 라이트 모드 전환 스크립트
+    function toggleTheme() {
+        const html = document.documentElement;
+        html.dataset.theme = (html.dataset.theme === 'bumblebee') ? 'night' : 'bumblebee';
+    }
+
+    function toggleVerse(className) {
+        const elements = document.getElementsByClassName(className);
+        const button = event.currentTarget;
+        const isHidden = elements[0].classList.contains('fade-hidden');
+        button.setAttribute('aria-expanded', !isHidden);
+        for (const element of elements) {
+            element.classList.toggle('fade-hidden');
+            element.classList.toggle('mb-4');
+        }
+    }
+
+    function toggleImage() {
+        const container = document.getElementById("imageContainer");
+        const btn = document.getElementById("toggleImageBtn");
+
+        if (container.classList.contains("opacity-0")) {
+            // 이미지 보이기: 컨테이너의 scrollHeight 값을 읽어 max-height로 지정
+            container.style.maxHeight = container.scrollHeight + "px";
+            container.classList.remove("opacity-0");
+            container.classList.add("opacity-100");
+            btn.textContent = "숨김";
+        } else {
+            // 이미지 숨기기:
+            // 우선 현재 높이를 max-height로 고정하고(전환 준비)
+            container.style.maxHeight = container.scrollHeight + "px";
+            // 강제로 reflow 시켜줌
+            container.offsetHeight;
+            // opacity와 max-height를 0으로 전환
+            container.classList.remove("opacity-100");
+            container.classList.add("opacity-0");
+            container.style.maxHeight = "0";
+            btn.textContent = "본문 참조 - <성 마태를 부르심 : 카라바조>";
+        }
+    }
+
+    let hideTopTimer = null;
+    let hideBottomTimer = null;
+
+    window.addEventListener('scroll', function() {
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        const scrollToBottomBtn = document.getElementById('scroll-to-bottom');
+
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const doc = document.documentElement;
+        const maxScroll = doc.scrollHeight - doc.clientHeight;
+
+        // --- 맨 위로 이동 버튼: 전체 스크롤 영역의 30%를 넘으면 표시 ---
+        const topThreshold = maxScroll * 0.30;
+        if (scrollPosition > topThreshold) {
+            scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            scrollToTopBtn.classList.add('opacity-50');
+            if (hideTopTimer) clearTimeout(hideTopTimer);
+            hideTopTimer = setTimeout(() => {
+                scrollToTopBtn.classList.remove('opacity-50');
+                scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            }, 1500);
+        } else {
+            scrollToTopBtn.classList.remove('opacity-50');
+            scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            if (hideTopTimer) {
+                clearTimeout(hideTopTimer);
+                hideTopTimer = null;
+            }
+        }
+
+        // --- 맨 아래로 이동 버튼: 사용자가 하단에 있지 않으면 표시 ---
+        // 하단에 가까운지 판별 (50px 이내면 "하단에 있다"로 간주)
+        const bottomTolerance = 50; // px 단위
+        if (scrollPosition + window.innerHeight < doc.scrollHeight - bottomTolerance) {
+            scrollToBottomBtn.classList.remove('opacity-0', 'pointer-events-none');
+            scrollToBottomBtn.classList.add('opacity-50');
+            if (hideBottomTimer) clearTimeout(hideBottomTimer);
+            hideBottomTimer = setTimeout(() => {
+                scrollToBottomBtn.classList.remove('opacity-50');
+                scrollToBottomBtn.classList.add('opacity-0', 'pointer-events-none');
+            }, 1500);
+        } else {
+            scrollToBottomBtn.classList.remove('opacity-50');
+            scrollToBottomBtn.classList.add('opacity-0', 'pointer-events-none');
+            if (hideBottomTimer) {
+                clearTimeout(hideBottomTimer);
+                hideBottomTimer = null;
+            }
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    const imageContainer = document.getElementById('imageContainer');
+    imageContainer.addEventListener('click', function() {
+        // fullscreen 클래스 토글: 클릭 시 전체 화면 모드로, 다시 클릭하면 원래대로
+        this.classList.toggle('fullscreen');
+    });
+</script>
+</body>
+</html>
